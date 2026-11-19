@@ -1,0 +1,294 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f8fafc;
+  color: #1e293b;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: #2563eb;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.navbar {
+  background: #172554;
+  color: white;
+  padding: 18px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: bold;
+  color: white;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav-links a {
+  color: white;
+}
+
+.nav-links button {
+  background: #ef4444;
+  color: white;
+  padding: 9px 16px;
+  border-radius: 6px;
+}
+
+.nav-register {
+  background: #2563eb;
+  padding: 9px 15px;
+  border-radius: 6px;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero {
+  text-align: center;
+  padding: 90px 20px;
+  background: #e0e7ff;
+  border-radius: 15px;
+  margin: 35px auto;
+}
+
+.hero-tag, .blog-label {
+  color: #4f46e5;
+  font-size: 12px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.hero h1 {
+  font-size: clamp(30px, 5vw, 48px);
+  margin: 15px 0;
+  color: #172554;
+}
+
+.hero p {
+  margin-bottom: 25px;
+  color: #475569;
+}
+
+.primary-link {
+  display: inline-block;
+  padding: 12px 23px;
+  background: #2563eb;
+  color: white;
+  border-radius: 7px;
+}
+
+.primary-link:hover {
+  background: #1d4ed8;
+}
+
+.blogs-section {
+  padding: 35px 0;
+}
+
+.blogs-section h2, .dashboard h2 {
+  margin-bottom: 20px;
+}
+
+.blog-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  padding: 25px 0;
+}
+
+.blog-card {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 3px 15px rgba(0,0,0,0.06);
+  overflow-wrap: anywhere;
+}
+
+.blog-card h3 {
+  margin: 12px 0;
+  font-size: 21px;
+}
+
+.blog-card p {
+  color: #64748b;
+  margin-bottom: 15px;
+  white-space: pre-wrap;
+}
+
+.blog-date {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #94a3b8;
+}
+
+.auth-container {
+  min-height: 75vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 15px;
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 450px;
+  padding: 35px;
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.07);
+}
+
+.auth-form h2 {
+  margin-bottom: 8px;
+  font-size: 28px;
+}
+
+.auth-form > p {
+  margin-bottom: 18px;
+  color: #64748b;
+}
+
+.auth-form input,
+.auth-form textarea {
+  width: 100%;
+  padding: 13px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 7px;
+  font: inherit;
+}
+
+.auth-form textarea {
+  resize: vertical;
+}
+
+.auth-form button {
+  width: 100%;
+  background: #2563eb;
+  color: white;
+  padding: 13px;
+  border-radius: 7px;
+  margin: 12px 0;
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.blog-form {
+  max-width: 650px;
+}
+
+.dashboard {
+  padding-top: 50px;
+  padding-bottom: 50px;
+  min-height: 70vh;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 35px;
+}
+
+.dashboard-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.dashboard-actions button {
+  background: #ef4444;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 5px;
+}
+
+.error {
+  color: #dc2626;
+  margin: 10px 0;
+}
+
+.footer {
+  background: #172554;
+  color: white;
+  text-align: center;
+  padding: 35px 15px;
+  margin-top: 40px;
+}
+
+.footer p {
+  color: #cbd5e1;
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .blog-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .blog-container {
+    grid-template-columns: 1fr;
+  }
+
+  .hero {
+    padding: 55px 15px;
+  }
+
+  .auth-form {
+    padding: 23px;
+  }
+
+  .dashboard-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+}
